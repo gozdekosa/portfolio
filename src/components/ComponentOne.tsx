@@ -3,6 +3,12 @@
 import Image from "next/image";
 import { useEffect } from "react";
 
+declare global {
+  interface Window {
+    Typed: any;
+  }
+}
+
 const ComponentOne = () => {
   useEffect(() => {
     const script = document.createElement("script");
