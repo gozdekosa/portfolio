@@ -17,7 +17,7 @@ import { BriefcaseBusiness, CircleUser, CodeXml, GitFork, Home, Mail } from "luc
 
 export function AppSidebar() {
   return (
-    <Sidebar collapsible="icon" className="border-r border-zinc-800 bg-[#121212]">
+    <Sidebar collapsible="icon" className="border-r">
 
       <SidebarHeader className="py-4">
         <SidebarMenu>
