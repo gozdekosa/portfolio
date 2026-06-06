@@ -29,7 +29,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       <body className={`${inter.className} min-h-full flex`}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >
