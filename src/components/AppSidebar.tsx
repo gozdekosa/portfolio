@@ -41,7 +41,7 @@ export function AppSidebar() {
             <SidebarMenu className="space-y-2"> {/* Menü elemanlarının arasını biraz açtık */}
               
               <SidebarMenuItem>
-                <SidebarMenuButton asChild className="w-full h-11 justify-center text-center text-base font-medium tracking-wide text-zinc-300 hover:text-purple-400 hover:bg-zinc-900/50 transition-colors">
+                <SidebarMenuButton asChild className="w-full h-11 justify-center text-center text-base font-medium tracking-wide text-zinc-600 dark:text-zinc-300  hover:text-purple-400 dark:hover:text-purple-400 dark:hover:bg-zinc-300/50 transition-colors">
                   <Link href="#home" className="w-full flex items-center justify-center">
                     <Home />
                     <span>Home</span>
@@ -50,7 +50,7 @@ export function AppSidebar() {
               </SidebarMenuItem>
 
               <SidebarMenuItem>
-                <SidebarMenuButton asChild className="w-full h-11 justify-center text-center text-base font-medium tracking-wide text-zinc-300 hover:text-purple-400 hover:bg-zinc-900/50 transition-colors">
+                <SidebarMenuButton asChild className="w-full h-11 justify-center text-center text-base font-medium tracking-wide text-zinc-600 dark:text-zinc-300  hover:text-purple-400 dark:hover:text-purple-400 dark:hover:bg-zinc-300/50 transition-colors">
                   <Link href="#about" className="w-full flex items-center justify-center">
                     <CircleUser />
                     <span>About</span>
@@ -59,7 +59,7 @@ export function AppSidebar() {
               </SidebarMenuItem>
 
               <SidebarMenuItem>
-                <SidebarMenuButton asChild className="w-full h-11 justify-center text-center text-base font-medium tracking-wide text-zinc-300 hover:text-purple-400 hover:bg-zinc-900/50 transition-colors">
+                <SidebarMenuButton asChild className="w-full h-11 justify-center text-center text-base font-medium tracking-wide text-zinc-600 dark:text-zinc-300  hover:text-purple-400 dark:hover:text-purple-400 dark:hover:bg-zinc-300/50 transition-colors">
                   <Link href="#skills" className="w-full flex items-center justify-center">
                     <CodeXml />
                     <span>Skills</span>
@@ -68,7 +68,7 @@ export function AppSidebar() {
               </SidebarMenuItem>
 
               <SidebarMenuItem>
-                <SidebarMenuButton asChild className="w-full h-11 justify-center text-center text-base font-medium tracking-wide text-zinc-300 hover:text-purple-400 hover:bg-zinc-900/50 transition-colors">
+                <SidebarMenuButton asChild className="w-full h-11 justify-center text-center text-base font-medium tracking-wide text-zinc-600 dark:text-zinc-300  hover:text-purple-400 dark:hover:text-purple-400 dark:hover:bg-zinc-300/50 transition-colors">
                   <Link href="#experience" className="w-full flex items-center justify-center">
                     <BriefcaseBusiness />
                     <span>Experience</span>
@@ -77,7 +77,7 @@ export function AppSidebar() {
               </SidebarMenuItem>
 
               <SidebarMenuItem>
-                <SidebarMenuButton asChild className="w-full h-11 justify-center text-center text-base font-medium tracking-wide text-zinc-300 hover:text-purple-400 hover:bg-zinc-900/50 transition-colors">
+                <SidebarMenuButton asChild className="w-full h-11 justify-center text-center text-base font-medium tracking-wide text-zinc-600 dark:text-zinc-300  hover:text-purple-400 dark:hover:text-purple-400 dark:hover:bg-zinc-300/50 transition-colors">
                   <Link href="#project" className="w-full flex items-center justify-center">
                     <GitFork />
                     <span>Project</span>
@@ -86,7 +86,7 @@ export function AppSidebar() {
               </SidebarMenuItem>
 
               <SidebarMenuItem>
-                <SidebarMenuButton asChild className="w-full h-11 justify-center text-center text-base font-medium tracking-wide text-zinc-300 hover:text-purple-400 hover:bg-zinc-900/50 transition-colors">
+                <SidebarMenuButton asChild className="w-full h-11 justify-center text-center text-base font-medium tracking-wide text-zinc-600 dark:text-zinc-300  hover:text-purple-400 dark:hover:text-purple-400 dark:hover:bg-zinc-300/50 transition-colors">
                   <Link href="#contact" className="w-full flex items-center justify-center">
                     <Mail />
                     <span>Contact</span>
@@ -108,7 +108,7 @@ export function AppSidebar() {
                   href="https://www.linkedin.com/in/gozdekosa/"
                   target="_blank"
                   rel="noreferrer"
-                  className="flex items-center justify-center w-10 h-10 rounded-lg bg-zinc-900/50 border border-zinc-800 text-zinc-400 hover:text-purple-400 hover:border-purple-500/40 transition-all shadow-sm"
+                  className="flex items-center justify-center w-10 h-10 rounded-lg dark:bg-zinc-900/50 bg-white border dark:border-zinc-800 border-zinc-500 dark:text-zinc-400 text-zinc-500  hover:text-purple-400 dark:hover:text-purple-400 hover:border-purple-500/40 transition-all shadow-sm"
                   title="LinkedIn"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
@@ -122,7 +122,7 @@ export function AppSidebar() {
                   href="https://github.com/gozdekosa"
                   target="_blank"
                   rel="noreferrer"
-                  className="flex items-center justify-center w-10 h-10 rounded-lg bg-zinc-900/50 border border-zinc-800 text-zinc-400 hover:text-purple-400 hover:border-purple-500/40 transition-all shadow-sm"
+                  className="flex items-center justify-center w-10 h-10 rounded-lg dark:bg-zinc-900/50 bg-white border dark:border-zinc-800 border-zinc-500 dark:text-zinc-400 text-zinc-500  hover:text-purple-400 dark:hover:text-purple-400 hover:border-purple-500/40 transition-all shadow-sm"
                   title="GitHub"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">

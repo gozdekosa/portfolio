@@ -3,10 +3,12 @@ import ComponentTwo from "@/components/ComponentTwo";
 import ComponentThree from "@/components/ComponentThree";
 import ComponentFour from "@/components/ComponentFour";
 import ComponentFive from "@/components/ComponentFive";
+import ThemeToggle from "@/components/ThemeToggle";
 
 export default function Home() {
   return (
     <div>
+      <ThemeToggle />
       <section id="home">
       <ComponentOne />
       </section>
