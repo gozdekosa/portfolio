@@ -3,8 +3,11 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/AppSidebar";
-import { cookies } from "next/dist/server/request/cookies";
+import { cookies } from "next/headers";
 import { ThemeProvider } from "next-themes";
+import {Locale, NextIntlClientProvider} from 'next-intl';
+import LocaleSwitcher from "@/components/LocaleSwitcher";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -19,6 +22,13 @@ export const metadata: Metadata = {
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const cookieStore = await cookies();
   const defaultOpen = cookieStore.get("sidebar_state")?.value === "true";
+
+  async function changeLocaleAction(locale: Locale) {
+    "use server";
+    const store = await cookies();
+    store.set("locale", locale);
+    console.log(locale);
+  }
   
   return (
     <html
@@ -27,20 +37,28 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       className={`${inter.variable} h-full antialiased`}
     >
       <body className={`${inter.className} min-h-full flex`}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <SidebarProvider>
-              <AppSidebar />
-              <main className="relative w-full">
-                <SidebarTrigger className="absolute top-4 left-4 z-50" />
-                <div>{children}</div>
-              </main>
-            </SidebarProvider>
-        </ThemeProvider>
+        <NextIntlClientProvider>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="dark"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <SidebarProvider>
+                <AppSidebar />
+                <main className="relative w-full">
+                  <SidebarTrigger className="absolute top-4 left-4 z-50" />
+                  <div>
+                    <div className="fixed top-6 right-6 z-50 flex items-center gap-3">
+                      <LocaleSwitcher changeLocaleAction={changeLocaleAction} />
+                      <ThemeToggle />
+                    </div>
+                    {children}
+                  </div>
+                </main>
+              </SidebarProvider>
+          </ThemeProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

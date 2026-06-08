@@ -1,28 +1,26 @@
-import ComponentOne from "@/components/ComponentOne";
-import ComponentTwo from "@/components/ComponentTwo";
-import ComponentThree from "@/components/ComponentThree";
-import ComponentFour from "@/components/ComponentFour";
-import ComponentFive from "@/components/ComponentFive";
-import ThemeToggle from "@/components/ThemeToggle";
+import HomePage from "@/components/Home";
+import About from "@/components/About";
+import Skills from "@/components/Skills";
+import Experience from "@/components/Experience";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
     <div>
-      <ThemeToggle />
       <section id="home">
-      <ComponentOne />
+      <HomePage />
       </section>
       <section id="about">
-      <ComponentTwo />
+      <About />
       </section>
       <section id="skills">
-      <ComponentThree />
+      <Skills />
       </section>
       <section id="experience">
-      <ComponentFour />
+      <Experience />
       </section>
       <section id="contact">
-      <ComponentFive />
+      <Contact />
       </section>
     </div>
   );

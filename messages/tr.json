@@ -1,0 +1,128 @@
+{
+  "HomePage": {
+    "typed": "Ben Gözde Kösa | Web Geliştiricisiyim",
+    "title_three": "Hoş Geldiniz",
+    "description": "CV'yi İndir"
+  },
+  "About": {
+    "title": "Hakkımda",
+    "subtitle": "Ben Gözde Kösa, Web Geliştiricisiyim",
+
+    "description_1": "React, Next.js ve frontend mimarisi konusunda uzmanlaşıyorum. Temiz kod, performans ve modern UI sistemlerine odaklanıyorum.",
+    "description_2": "Akıcı kullanıcı deneyimleri ve ölçeklenebilir web uygulamaları geliştirmeyi seviyorum. Şu anda gerçek projelerle full-stack becerilerimi geliştiriyorum.",
+
+    "info": {
+      "name": "Gözde Kösa",
+      "email": "GozdeKosaa@hotmail.com",
+      "age": "28",
+      "from": "Bursa"
+    },
+
+    "download_cv": "CV İndir"
+  },
+
+  "Skills": {
+    "title": "Yetenekler & Uzmanlıklar",
+
+    "frontend": {
+      "title": "Frontend Geliştirme",
+      "description": "React, Next.js (App Router, SSR, CSR), TypeScript",
+      "tags": {
+        "state": "State Yönetimi",
+        "tailwind": "Tailwind CSS",
+        "shadcn": "ShadCN UI"
+      }
+    },
+
+    "architecture": {
+      "title": "Mimari & Yazılım Mühendisliği",
+      "items": [
+        "Clean Code & SOLID prensipleri",
+        "Feature bazlı ölçeklenebilir klasör yapısı",
+        "Custom hook pattern & form validation"
+      ]
+    },
+
+    "backend": {
+      "title": "Backend & API Entegrasyonu",
+      "description": "Node.js, RESTful API tasarımı & Auth akışları (JWT, Session)",
+      "tags": {
+        "api": "API Testi (Postman)",
+        "microservice": "Microservice Mantığı"
+      }
+    },
+
+    "tools": {
+      "title": "Araçlar & İş Akışı",
+      "items": [
+        "Git & GitHub iş akışı",
+        "Figma'dan code'a dönüşüm",
+        "Terminal tabanlı geliştirme"
+      ]
+    },
+
+    "learning": {
+      "title": "Şu Anda Öğreniyorum",
+      "subtitle": "Gelecek projeler için keşfettiğim teknolojiler",
+      "items": [
+        "Advanced Next.js Pattern’leri",
+        "Performans optimizasyonu",
+        "Mobile temel konular"
+      ]
+    }
+  },
+
+  "Experience": {
+    "title": "İş Deneyimi",
+
+    "job": {
+      "title": "Yazılım Geliştirici",
+      "company": "Bilginet Akademi",
+      "location": "Bursa",
+      "period": "2020 — Günümüz"
+    },
+
+    "items": [
+      "Kurumsal CRM ve yönetim sistemlerinin geliştirilmesi ve bakımı.",
+      "React, Next.js, TypeScript ve Tailwind CSS ile modern ve responsive arayüzler geliştirme.",
+      "Yeniden kullanılabilir component’ler ve ölçeklenebilir frontend mimarileri tasarlama.",
+      "REST API ve üçüncü parti servis entegrasyonları.",
+      "Uygulama performansı, sürdürülebilirlik ve kullanıcı deneyimi iyileştirmeleri.",
+      "Laravel ve modern frontend teknolojileri ile full-stack geliştirmeye katkı sağlama."
+    ]
+  },
+
+  "Contact": {
+    "title": "Benimle İletişime Geç",
+    "description": "Şu anda yeni kariyer fırsatlarına açığım. İş ilanları veya teknik görüşmeler için aşağıdaki kanallar üzerinden bana ulaşabilirsiniz.",
+
+    "direct": {
+      "title": "Direkt İletişim",
+      "location": "Bursa, Türkiye",
+      "phone": "0539 544 31 04"
+    },
+
+    "social": {
+      "title": "Sosyal Profiller",
+      "linkedin": "LinkedIn",
+      "github": "GitHub"
+    },
+
+    "email": {
+      "title": "Mesaj Bırak",
+      "description": "E-posta istemcinizde hızlıca taslak açar.",
+      "button": "E-posta Gönder"
+    }
+  },
+
+  "Sidebar": {
+    "menu": {
+      "home": "Ana Sayfa",
+      "about": "Hakkımda",
+      "skills": "Yetenekler",
+      "experience": "Deneyim",
+      "project": "Projeler",
+      "contact": "İletişim"
+    }
+  }
+}

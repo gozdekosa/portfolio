@@ -1,0 +1,129 @@
+{
+  "HomePage": {
+    "typed": "I'm Gözde Kösa | I'm a Web Developer",
+    "title_three": "Welcome",
+    "description": "Download CV"
+  },
+
+  "About": {
+    "title": "About Me",
+    "subtitle": "I'm Gözde Kösa, a Web Developer",
+
+    "description_1": "I specialize in React, Next.js and frontend architecture with a focus on clean code, performance and modern UI systems.",
+    "description_2": "I enjoy building smooth user experiences and scalable web applications. Currently improving my full-stack development skills through real projects.",
+
+    "info": {
+      "name": "Gözde Kösa",
+      "email": "GozdeKosaa@hotmail.com",
+      "age": "28",
+      "from": "Bursa"
+    },
+
+    "download_cv": "Download CV"
+  },
+
+  "Skills": {
+    "title": "Skills & Competencies",
+
+    "frontend": {
+      "title": "Frontend Development",
+      "description": "React, Next.js (App Router, SSR, CSR), TypeScript",
+      "tags": {
+        "state": "State Management",
+        "tailwind": "Tailwind CSS",
+        "shadcn": "ShadCN UI"
+      }
+    },
+
+    "architecture": {
+      "title": "Architecture & Engineering",
+      "items": [
+        "Clean Code & SOLID principles",
+        "Feature-based scalable folder structure",
+        "Custom hook patterns & Form validation"
+      ]
+    },
+
+    "backend": {
+      "title": "Backend & API Integration",
+      "description": "Node.js, RESTful API design & Auth flows (JWT, Session)",
+      "tags": {
+        "api": "API Testing (Postman)",
+        "microservice": "Microservice Mindset"
+      }
+    },
+
+    "tools": {
+      "title": "Tools & Workflow",
+      "items": [
+        "Git & GitHub Workflow",
+        "Figma to Code Conversion",
+        "Terminal-based Development"
+      ]
+    },
+
+    "learning": {
+      "title": "Currently Learning",
+      "subtitle": "Technologies I'm exploring for future projects",
+      "items": [
+        "Advanced Next.js Patterns",
+        "Performance Optimization",
+        "Mobile Fundamentals"
+      ]
+    }
+  },
+
+  "Experience": {
+    "title": "Work Experience",
+
+    "job": {
+      "title": "Software Developer",
+      "company": "Bilginet Akademi",
+      "location": "Bursa",
+      "period": "2020 — Present"
+    },
+
+    "items": [
+      "Building and maintaining enterprise CRM and management systems.",
+      "Developing modern, responsive user interfaces with React, Next.js, TypeScript, and Tailwind CSS.",
+      "Designing reusable components and scalable frontend architectures.",
+      "Integrating REST APIs and third-party services.",
+      "Improving application performance, maintainability, and user experience.",
+      "Contributing to full-stack development using Laravel and modern frontend technologies."
+    ]
+  },
+
+  "Contact": {
+    "title": "Connect With Me",
+    "description": "I am currently open to new career opportunities. Feel free to reach out via any of the channels below regarding job openings or technical interviews.",
+
+    "direct": {
+      "title": "Direct Contact",
+      "location": "Bursa, Türkiye",
+      "phone": "0539 544 31 04"
+    },
+
+    "social": {
+      "title": "Social Profiles",
+      "linkedin": "LinkedIn",
+      "github": "GitHub"
+    },
+
+    "email": {
+      "title": "Drop a Line",
+      "description": "Open a quick draft in your email client.",
+      "button": "Send an Email"
+    }
+  },
+
+  "Sidebar": {
+    "menu": {
+      "home": "Home",
+      "about": "About",
+      "skills": "Skills",
+      "experience": "Experience",
+      "project": "Projects",
+      "contact": "Contact"
+    }
+  }
+}
