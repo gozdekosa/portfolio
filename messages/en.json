@@ -7,7 +7,8 @@
 
   "About": {
     "title": "About Me",
-    "subtitle": "I'm Gözde Kösa, a Web Developer",
+    "before_name": "I'm",
+    "after_name": ", a Web Developer",
 
     "description_1": "I specialize in React, Next.js and frontend architecture with a focus on clean code, performance and modern UI systems.",
     "description_2": "I enjoy building smooth user experiences and scalable web applications. Currently improving my full-stack development skills through real projects.",

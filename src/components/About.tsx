@@ -17,9 +17,9 @@ const About = () => {
 
           <div className="lg:basis-4/6 space-y-4 lg:p-10">
             <p className="text-2xl lg:text-3xl font-bold dark:text-white text-zinc-950">
-              {t("subtitle").split(",")[0]}{" "}
+              {t("before_name")}{" "}
               <span className="text-purple-400">Gözde Kösa</span>
-              {t("subtitle").includes(",") && ", a Web Developer"}
+              {t("after_name")}
             </p>
 
             <p className="dark:text-zinc-400 text-zinc-900 text-sm">
