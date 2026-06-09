@@ -24,9 +24,66 @@ import {
 } from "lucide-react";
 
 import { useTranslations } from "next-intl";
+import { useEffect, useState } from "react";
 
 export function AppSidebar() {
   const t = useTranslations("Sidebar.menu");
+
+  const [activeSection, setActiveSection] = useState("home");
+
+  useEffect(() => {
+    const sections = document.querySelectorAll("section[id]");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      {
+        threshold: 0.4,
+      }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
+    return () => observer.disconnect();
+  }, []);
+
+  const menuItems = [
+    {
+      id: "home",
+      label: t("home"),
+      icon: Home,
+    },
+    {
+      id: "about",
+      label: t("about"),
+      icon: CircleUser,
+    },
+    {
+      id: "skills",
+      label: t("skills"),
+      icon: CodeXml,
+    },
+    {
+      id: "experience",
+      label: t("experience"),
+      icon: BriefcaseBusiness,
+    },
+    {
+      id: "project",
+      label: t("project"),
+      icon: GitFork,
+    },
+    {
+      id: "contact",
+      label: t("contact"),
+      icon: Mail,
+    },
+  ];
 
   return (
     <Sidebar collapsible="icon" className="border-r">
@@ -50,62 +107,38 @@ export function AppSidebar() {
       <SidebarContent>
         <SidebarGroup>
           <SidebarGroupContent>
-            <SidebarMenu className="space-y-2">
+            <SidebarMenu>
+              {menuItems.map((item) => {
+                const Icon = item.icon;
+                const active = activeSection === item.id;
 
-              <SidebarMenuItem>
-                <SidebarMenuButton asChild className="w-full h-11 justify-center text-center text-base font-medium tracking-wide text-zinc-600 dark:text-zinc-300 hover:text-purple-400 dark:hover:text-purple-400 dark:hover:bg-zinc-300/50 transition-colors">
-                  <Link href="#home" className="flex items-center justify-center gap-2">
-                    <Home />
-                    <span>{t("home")}</span>
-                  </Link>
-                </SidebarMenuButton>
-              </SidebarMenuItem>
+                return (
+                  <SidebarMenuItem key={item.id}>
+                    <SidebarMenuButton
+                      asChild
+                      className={`
+                        w-full h-11 justify-center text-center
+                        text-base font-medium tracking-wide
+                        transition-all duration-300
 
-              <SidebarMenuItem>
-                <SidebarMenuButton asChild className="w-full h-11 justify-center text-center text-base font-medium tracking-wide text-zinc-600 dark:text-zinc-300 hover:text-purple-400 dark:hover:text-purple-400 dark:hover:bg-zinc-300/50 transition-colors">
-                  <Link href="#about" className="flex items-center justify-center gap-2">
-                    <CircleUser />
-                    <span>{t("about")}</span>
-                  </Link>
-                </SidebarMenuButton>
-              </SidebarMenuItem>
-
-              <SidebarMenuItem>
-                <SidebarMenuButton asChild className="w-full h-11 justify-center text-center text-base font-medium tracking-wide text-zinc-600 dark:text-zinc-300 hover:text-purple-400 dark:hover:text-purple-400 dark:hover:bg-zinc-300/50 transition-colors">
-                  <Link href="#skills" className="flex items-center justify-center gap-2">
-                    <CodeXml />
-                    <span>{t("skills")}</span>
-                  </Link>
-                </SidebarMenuButton>
-              </SidebarMenuItem>
-
-              <SidebarMenuItem>
-                <SidebarMenuButton asChild className="w-full h-11 justify-center text-center text-base font-medium tracking-wide text-zinc-600 dark:text-zinc-300 hover:text-purple-400 dark:hover:text-purple-400 dark:hover:bg-zinc-300/50 transition-colors">
-                  <Link href="#experience" className="flex items-center justify-center gap-2">
-                    <BriefcaseBusiness />
-                    <span>{t("experience")}</span>
-                  </Link>
-                </SidebarMenuButton>
-              </SidebarMenuItem>
-
-              <SidebarMenuItem>
-                <SidebarMenuButton asChild className="w-full h-11 justify-center text-center text-base font-medium tracking-wide text-zinc-600 dark:text-zinc-300 hover:text-purple-400 dark:hover:text-purple-400 dark:hover:bg-zinc-300/50 transition-colors">
-                  <Link href="#project" className="flex items-center justify-center gap-2">
-                    <GitFork />
-                    <span>{t("project")}</span>
-                  </Link>
-                </SidebarMenuButton>
-              </SidebarMenuItem>
-
-              <SidebarMenuItem>
-                <SidebarMenuButton asChild className="w-full h-11 justify-center text-center text-base font-medium tracking-wide text-zinc-600 dark:text-zinc-300 hover:text-purple-400 dark:hover:text-purple-400 dark:hover:bg-zinc-300/50 transition-colors">
-                  <Link href="#contact" className="flex items-center justify-center gap-2">
-                    <Mail />
-                    <span>{t("contact")}</span>
-                  </Link>
-                </SidebarMenuButton>
-              </SidebarMenuItem>
-
+                        ${
+                          active
+                            ? "bg-purple-500/10 text-purple-500 border border-purple-500/30"
+                            : "text-zinc-600 dark:text-zinc-300 hover:text-purple-400 dark:hover:text-purple-400"
+                        }
+                      `}
+                    >
+                      <Link
+                        href={`#${item.id}`}
+                        className="flex items-center justify-center gap-2"
+                      >
+                        <Icon />
+                        <span>{item.label}</span>
+                      </Link>
+                    </SidebarMenuButton>
+                  </SidebarMenuItem>
+                );
+              })}
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
